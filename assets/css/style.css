@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+    display: inline;
+    padding: 10px;
+}
+li a{
+    text-decoration: none;
+}
+nav{
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(255, 115, 0);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.settings{
+ padding: 15px;
+ width: 30px;
+ float: right;
+}
+body{
+    background-image: url(../img/sys_bg.jpg);
+}
+aside{
+      width: 15%;
+      background-color: rgb(255, 255, 255);
+      height: 93vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+ul li a{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+}
+.container{
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    gap: 20px;
+}
+.containerMain{
+    width: 85%;
+}
+.containerAside{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.cadastros{
+    margin-top: 30px;
+    padding: 5px;
+}
+.cadastros h1{
+    text-align: center;
+    margin-top: 10px;
+}
+table{
+    margin-top: 20px;
+    text-align: center;
+}
+table thead tr th{
+    font-size: 20px;
+    color: white;
+}
+table thead tr{
+    background-color: grey;
+}
