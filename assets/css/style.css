@@ -17,9 +17,13 @@ nav{
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 .settings{
- padding: 15px;
- width: 30px;
+ padding: 20px;
+ width: 20px;
  float: right;
+}
+.logo{
+    width: 75px;
+    float: left;
 }
 body{
     background-image: url(../img/sys_bg.jpg);
@@ -71,4 +75,24 @@ table thead tr th{
 }
 table thead tr{
     background-color: grey;
+}
+.search{
+   margin-left: 33%;
+   width: 500px;
+   height: 25px;
+   border-radius: 20px;
+}
+.addButton{
+    margin-left: 25px;
+    width: 200px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 19px;
+}
+.addButton:active{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    font-size: 17px;
 }
