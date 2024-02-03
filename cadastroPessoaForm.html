@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="#"><img src="./assets/img/logo.png" alt="" class="logo"></a>
+        <a href="#"><img src="./assets/img/gear.png" alt="settings icon" class="settings"></a>
+    </nav>
+    <div class="container">
+        <aside >
+            <ul class="containerAside">
+                <li><a href="./index.html">Página Inicial</a></li>
+                <hr>
+                <li><a href="./cadastro.html">Pessoas</a></li>
+                    <ul class="fallback">
+                        <li><a href="./cadastroPessoaForm.html  ">Cadastrar Pessoa</a></li>
+                    </ul>
+                <hr>
+            </ul>
+        </aside> 
+        <div class="containerMain">
+            <h1>Cadastrar Pessoa</h1>
+            <div class="formCad">
+                <form action="" id="cadPessoas">
+                    <h3>Informações Gerais</h3>
+                    <input type="text" placeholder="Nome: " name="nome" id="nome">
+                    <input type="text" placeholder="Razão Social: " name="razaoSocial" id="razaoSocial" >
+                    <input type="text" placeholder="Nome Fantasia: " name="nomeFantasia" id="nomeFantasia" >
+                    <input type="text" placeholder="CPF: " name="cpf" id="cpf" >
+                    <input type="text" placeholder="CNPJ: " name="cnpj" id="cnpj" >
+                    <br>
+                    <label for="tipoCadastro">Tipo de Cadastro</label>
+                    <select name="tipoCadastro" id="tipoCadastro">
+                        <option value="cliente">Cliente</option>
+                        <option value="colaborador">Colaborador</option>
+                        <option value="fornecedor">Fornecedor</option>
+                    </select>
+                    <label for="tipoPessoa">Tipo de Pessoa</label>
+                    <select name="tipoPessoa" id="tipoPessoa">
+                        <option value="fisica">Fisíca</option>
+                        <option value="juridica">Juridica</option>
+                    </select>
+                    <br>
+                    <h3>Endereço</h3>
+                    <input type="text" placeholder="Rua: " name="rua">
+                    <input type="text" placeholder="CEP: " name="cep">
+                    <br>
+                    <input type="text" placeholder="Cidade: " name="cidade">
+                    <input type="text" placeholder="Estado: " name="estado">
+                    <br>
+                    <input type="number" placeholder="Número: " name="numero">
+                    <input type="text" placeholder="Completo: " name="completo">
+
+                    <button type="submit" id="salvar">Salvar</button>
+                </form>
+            </div>
+        </div>   
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
