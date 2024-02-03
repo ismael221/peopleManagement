@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
             </ul>
         </aside> 
         <div class="containerMain">
-            <h1>Cadastrar Pessoa</h1>
+            <h1 class="cadTitle">Cadastrar Pessoa</h1>
             <div class="formCad">
                 <form action="" id="cadPessoas">
                     <h3>Informações Gerais</h3>
@@ -36,29 +37,30 @@
                     <input type="text" placeholder="CPF: " name="cpf" id="cpf" >
                     <input type="text" placeholder="CNPJ: " name="cnpj" id="cnpj" >
                     <br>
-                    <label for="tipoCadastro">Tipo de Cadastro</label>
                     <select name="tipoCadastro" id="tipoCadastro">
                         <option value="cliente">Cliente</option>
                         <option value="colaborador">Colaborador</option>
                         <option value="fornecedor">Fornecedor</option>
                     </select>
-                    <label for="tipoPessoa">Tipo de Pessoa</label>
                     <select name="tipoPessoa" id="tipoPessoa">
                         <option value="fisica">Fisíca</option>
                         <option value="juridica">Juridica</option>
                     </select>
                     <br>
-                    <h3>Endereço</h3>
-                    <input type="text" placeholder="Rua: " name="rua">
-                    <input type="text" placeholder="CEP: " name="cep">
+                    <h3>Contato: </h3>
+                    <input type="email" id="email" placeholder="Email: " name="email">
+                    <input type="text" id="telefone" placeholder="Telefone" name="telefone">
+                    <h3>Endereço: </h3>
+                    <input type="text" placeholder="Rua: " name="rua" id="rua">
+                    <input type="text" placeholder="CEP: " name="cep" id="cep">
                     <br>
-                    <input type="text" placeholder="Cidade: " name="cidade">
-                    <input type="text" placeholder="Estado: " name="estado">
+                    <input type="text" placeholder="Cidade: " name="cidade" id="cidade">
+                    <input type="text" placeholder="Estado: " name="estado" id="estado">
                     <br>
-                    <input type="number" placeholder="Número: " name="numero">
-                    <input type="text" placeholder="Completo: " name="completo">
-
-                    <button type="submit" id="salvar">Salvar</button>
+                    <input type="number" placeholder="Número: " name="numero" id="numero">
+                    <input type="text" placeholder="Completo: " name="completo" id="complemento">
+                    <br>
+                    <button type="submit" class="addButton saveBtn">Salvar</button>
                 </form>
             </div>
         </div>   
