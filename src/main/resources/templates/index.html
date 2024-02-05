@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"   xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SysPersona</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<nav>
+  <a href="#"><img src="../img/logo.png" alt="" class="logo"></a>
+  <a href="#"><img src="./assets/img/gear.png" alt="settings icon" class="settings"></a>
+</nav>
+<div class="pricing-container">
+  <div class="pricing-plan">
+    <div class="plan-title">Básico</div>
+    <div class="plan-price">R$ 9.99/mês</div>
+    <ul class="plan-features">
+      <li>✅ 10GB Armazenamento</li>
+      <li>✅ 1 Usuário</li>
+      <li>🚫 Suporte</li>
+    </ul>
+    <a th:href="@{/v1/pessoas}"><button class="plan-button" style="background-color: blue;" >Ativo</button></a>
+  </div>
+  <div class="pricing-plan">
+    <div class="plan-title">Padrão</div>
+    <div class="plan-price">R$ 19.99/mês</div>
+    <ul class="plan-features">
+      <li>✅ 50GB Armazenamento</li>
+      <li>✅ 5 Usuários</li>
+      <li>✅ Telefone &amp; Suporte por email</li>
+    </ul>
+    <button class="plan-button">Cadastrar</button>
+  </div>
+  <div class="pricing-plan">
+    <div class="plan-title">Premium</div>
+    <div class="plan-price">R$ 49.99/mês</div>
+    <ul class="plan-features">
+      <li>✅ 100GB Armazenamento</li>
+      <li>✅ 10 Usuários</li>
+      <li>✅ 24/7 Suporte</li>
+    </ul>
+    <button class="plan-button">Cadastrar</button>
+  </div>
+</div>
+</body>
+</html>

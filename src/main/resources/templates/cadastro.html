@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Cadastro de Pessoas</title>
+</head>
+<body>
+<nav>
+    <a href="#"><img src="./assets/img/logo.png" alt="" class="logo"></a>
+    <a href="#"><img src="./assets/img/gear.png" alt="settings icon" class="settings"></a>
+</nav>
+<div class="container">
+    <aside >
+        <ul class="containerAside">
+            <li><a th:href="@{/}">Página Inicial</a></li>
+            <hr>
+            <li><a th:href="@{/v1/pessoas}">Pessoas</a></li>
+            <ul class="fallback">
+                <li><a th:href="@{/v1/pessoas/cadastrar}">Cadastrar Pessoa</a></li>
+            </ul>
+            <hr>
+        </ul>
+    </aside>
+    <main class="containerMain">
+        <div class="cadastros">
+            <h1>Cadastro de Pessoas</h1>
+            <input type="text" class="search">
+            <a th:href="@{/v1/pessoas/cadastrar}"><button class="addButton">Cadastrar</button></a>
+            <table border="1" width="100%" height="auto">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo de Pessoa</th>
+                    <th>Tipo de Cadastro</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr th:each="pessoa : ${listaPessoas}">
+                    <td th:text="${pessoa.nome}">
+                    <td th:text="${pessoa.tipoPessoa}">
+                    <td th:text="${pessoa.tipoCadastro}">
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
