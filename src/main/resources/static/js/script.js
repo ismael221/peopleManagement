@@ -7,6 +7,15 @@ $(document).ready(function(){
     $('#cep').mask('00000-000');
     $('#cpf').mask('000.000.000-00');
     $('#cnpj').mask('00.000.000/0000-00');
+    $('#valorTeste').keyup(function (){
+        let nome = $(this).val();
+        if (nome){
+            carregarPessoasPorNome(nome);
+        }else{
+            carregarPessoas();
+        }
+
+    })
 })
 
 //Muda os campos conforme o tipo de pessoa selecionada
@@ -107,15 +116,73 @@ $("#cadPessoas").validate({
     }
 });
 
+
 function carregarPessoas(){
     $.ajax({
         url:'http://localhost:8080/api/v1/pessoas',
         method:'GET',
         success:function(data){
-            alert(data)
-            console.log(data)
+            $('#tabelaPessoas').empty();
+            for (let i = 0; i < data.length; i++) {
+                let pessoa = data[i];
+
+                let id = $('<td>').text(pessoa.nome);
+
+                let titulo = $('<td>').append(
+                    $('<td>').text(pessoa.tipoPessoa)
+                );
+
+                let sinopse = $('<td>').append(
+                    $('<td>').text(pessoa.tipoCadastro)
+                );
+
+                let tr = $('<tr>')
+                    .attr('data-id', pessoa.id)
+                    .append(id)
+                    .append(titulo)
+                    .append(sinopse);
+
+                $('#tabelaPessoas').append(tr);
+        }
         },
-        error:function(){
+        error:function (){
+           console.log("Erro")
+        }
+
+    })
+}
+
+function carregarPessoasPorNome(nome){
+    $.ajax({
+        url:'http://localhost:8080/api/v1/pessoas/nome/'+nome,
+        method:'GET',
+        success:function(data){
+            console.log(data)
+            $('#tabelaPessoas').empty();
+            for (let i = 0; i < data.length; i++) {
+                let pessoa = data[i];
+
+                let id = $('<td>').text(pessoa.nome);
+
+                let titulo = $('<td>').append(
+                    $('<td>').text(pessoa.tipoPessoa)
+                );
+
+                let sinopse = $('<td>').append(
+                    $('<td>').text(pessoa.tipoCadastro)
+                );
+
+                let tr = $('<tr>')
+                    .attr('data-id', pessoa.id)
+                    .append(id)
+                    .append(titulo)
+                    .append(sinopse);
+
+                $('#tabelaPessoas').append(tr);
+            }
+        },
+        error:function (){
+            console.log("Erro")
         }
 
     })

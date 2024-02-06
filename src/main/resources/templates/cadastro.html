@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/style.css}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <title>Cadastro de Pessoas</title>
 </head>
 <body>
@@ -27,7 +29,7 @@
     <main class="containerMain">
         <div class="cadastros">
             <h1>Cadastro de Pessoas</h1>
-            <input type="text" class="search">
+            <input type="text" class="search" id="valorTeste">
             <a th:href="@{/v1/pessoas/cadastrar}"><button class="addButton">Cadastrar</button></a>
             <table border="1" width="100%" height="auto">
                 <thead>
@@ -38,12 +40,8 @@
                 </tr>
                 </thead>
 
-                <tbody>
-                <tr th:each="pessoa : ${listaPessoas}">
-                    <td th:text="${pessoa.nome}">
-                    <td th:text="${pessoa.tipoPessoa}">
-                    <td th:text="${pessoa.tipoCadastro}">
-                </tr>
+                <tbody id="tabelaPessoas">
+
                 </tbody>
             </table>
         </div>
