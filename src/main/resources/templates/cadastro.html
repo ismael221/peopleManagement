@@ -9,8 +9,8 @@
 </head>
 <body>
 <nav>
-    <a href="#"><img src="./assets/img/logo.png" alt="" class="logo"></a>
-    <a href="#"><img src="./assets/img/gear.png" alt="settings icon" class="settings"></a>
+    <a href="#"><img th:src="@{/img/logo.png}" alt="" class="logo"></a>
+    <a href="#"><img th:src="@{/img/gear.png}" alt="settings icon" class="settings"></a>
 </nav>
 <div class="container">
     <aside >
@@ -49,6 +49,6 @@
         </div>
     </main>
 </div>
-<script src="./assets/js/script.js"></script>
+<script th:src="@{/js/script.js}"></script>
 </body>
 </html>
